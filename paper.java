@@ -1,3 +1,4 @@
+//C109151149æ–½é¨é©¥ åˆ°æ­¤ä¸€éŠ(ä½œæ¥­3)
 package test;
 import java.io.*;
 
@@ -12,10 +13,10 @@ public class paper
 			int computer = (int)(Math.random() *3)+1;
 			int gm=gamer();
 			String[] computerOp=new String[3];
-			computerOp[0]="°Å¤M";
-			computerOp[1]="¥ÛÀY";
-			computerOp[2]="¥¬";
-			System.out.println("¹q¸£¥X:"+computerOp[computer-1]);
+			computerOp[0]="å‰ªåˆ€";
+			computerOp[1]="çŸ³é ­";
+			computerOp[2]="å¸ƒ";
+			System.out.println("é›»è…¦å‡º:"+computerOp[computer-1]);
 			int whoWin=intwhoWin(computer, gm);
 			switch(whoWin) {
 			case(0):
@@ -40,7 +41,7 @@ public class paper
 	}
 	public static int gamer()throws IOException{
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("½Ğ¿é¤J±z­n¥Xªº®±(1:°Å¤M¡A2:¥ÛÀY¡A3:¥¬)");
+		System.out.println("è«‹è¼¸å…¥æ‚¨è¦å‡ºçš„æ‹³(1:å‰ªåˆ€ï¼Œ2:çŸ³é ­ï¼Œ3:å¸ƒ)");
 		String bk= bf.readLine();
 		return Integer.parseInt(bk);
 	}
@@ -49,13 +50,13 @@ public class paper
 		switch (gamers){
 			case(1):
 				if(computer==1) {
-					return 1; //¥­¤â
+					return 1; //å¹³æ‰‹
 				}
 				else if(computer==2) {
-					return 2; //¹q¸£Àç
+					return 2; //é›»è…¦ç‡Ÿ
 				}
 				else {
-					return 3;//ª±®aÀç
+					return 3;//ç©å®¶ç‡Ÿ
 				}
 			case(2):
 				if(computer==1) {
@@ -113,13 +114,13 @@ public class paper
 		}
 		switch(whoWin) {
 		case 1:
-			str3="¥­¤â";
+			str3="å¹³æ‰‹";
 			break;
 		case 2:
-			str3="¹q¸£Ä¹";
+			str3="é›»è…¦è´";
 			break;
 		case 3:
-			str3="ª±®aÄ¹";
+			str3="ç©å®¶è´";
 			break;
 		}
 		System.out.println(str1+"\n"+str2+"\n"+str3);
